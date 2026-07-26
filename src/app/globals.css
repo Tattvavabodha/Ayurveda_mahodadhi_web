@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  We load Noto Serif Devanagari (for Sanskrit headings/body text) and
+  Noto Serif (its Latin companion, for English text) from Google Fonts.
+  Both are free, open-source, and have excellent Unicode coverage -
+  see Phase 4 explanation for why we chose these over licensed fonts.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  --font-devanagari: 'Noto Serif Devanagari', serif;
+  --font-serif: 'Noto Serif', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F3EBDD; /* parchment */
+  color: #4A3B2A; /* text-brown */
+  font-family: var(--font-serif);
+
+  /*
+    Manuscript page texture - built from two layers, both generated
+    purely in code (no image files, so this stays fast to load and
+    looks identical for every visitor):
+
+    Layer 1 (vignette): a radial gradient that very slightly darkens
+    the page toward its edges, like the worn edges of an old folio.
+
+    Layer 2 (grain): an inline SVG using feTurbulence, a filter that
+    generates fine random "noise" - like scattering countless tiny
+    specks of warm brown ink at very low opacity, mimicking the look
+    of real handmade paper fiber up close.
+  */
+  background-image:
+    radial-gradient(ellipse at center, rgba(74, 59, 42, 0) 55%, rgba(74, 59, 42, 0.10) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.29 0 0 0 0 0.23 0 0 0 0 0.16 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, repeat;
+}
+
+/*
+  ---------------------------------------------------------------------
+  Manuscript background effect
+  ---------------------------------------------------------------------
+  How it works, in plain terms:
+  1. `.manuscript-bg` places a repeating pattern of faint Devanagari
+     text behind the page content (the pattern itself lives in
+     HeroSection.tsx as an SVG, explained there).
+  2. `.manuscript-fade` sits on top of that pattern and is a
+     "radial gradient" - a see-through circle that is more opaque
+     (solid parchment) in the center and fades to fully transparent
+     at the edges. This is what makes the background text readable-
+     faint at the edges, but the center (where the title and search
+     bar live) stays clean and highly legible.
+  ---------------------------------------------------------------------
+*/
+.manuscript-fade {
+  background: radial-gradient(
+    ellipse at center,
+    #F3EBDD 35%,
+    rgba(243, 235, 221, 0.6) 65%,
+    rgba(243, 235, 221, 0.15) 100%
+  );
+}
+
+/* Utility class for the "lifted card" elevation effect (Phase 4 decision) */
+.elevated-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.elevated-card:hover {
+  transform: translateY(-3px);
+}
