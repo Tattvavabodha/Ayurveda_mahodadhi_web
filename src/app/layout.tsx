@@ -42,7 +42,7 @@ const notoSerif = Noto_Serif({
 // We'll expand this per-page later (Phase 6+) using Next.js's
 // per-page metadata feature, without touching this file.
 export const metadata: Metadata = {
-  title: "आयुर्वेदमहोदधिः",
+  title: "॥आयुर्वेदमहोदधिः॥",
   description:
     "A scholarly digital Ayurveda knowledge platform - classical texts, commentaries, and word-by-word study tools.",
 };
