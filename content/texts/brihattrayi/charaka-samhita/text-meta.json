@@ -1,0 +1,17 @@
+{
+  "textId": "charaka-samhita",
+  "categoryId": "brihattrayi",
+  "order": 3,
+  "name": {
+    "sanskrit": "चरकसंहिता",
+    "transliteration": "Caraka Saṃhitā",
+    "english": "Charaka Samhita"
+  },
+  "author": "अग्निवेशः (चरकप्रतिसंस्कृता)",
+  "divisionLabel": {
+    "sanskrit": "स्थानम्",
+    "english": "Sthāna"
+  },
+  "divisions": [],
+  "status": "coming-soon"
+}

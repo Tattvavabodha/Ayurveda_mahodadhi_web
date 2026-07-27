@@ -1,0 +1,17 @@
+{
+  "textId": "ashtanga-sangraha",
+  "categoryId": "brihattrayi",
+  "order": 2,
+  "name": {
+    "sanskrit": "अष्टाङ्गसङ्ग्रहः",
+    "transliteration": "Aṣṭāṅga Saṅgrahaḥ",
+    "english": "Ashtanga Sangraha"
+  },
+  "author": "वृद्धवाग्भटः",
+  "divisionLabel": {
+    "sanskrit": "स्थानम्",
+    "english": "Sthāna"
+  },
+  "divisions": [],
+  "status": "coming-soon"
+}

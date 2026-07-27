@@ -1,0 +1,17 @@
+{
+  "textId": "yoga-ratnakara",
+  "categoryId": "anya-granthah",
+  "order": 2,
+  "name": {
+    "sanskrit": "योगरत्नाकरः",
+    "transliteration": "Yoga Ratnākaraḥ",
+    "english": "Yoga Ratnakara"
+  },
+  "author": "अज्ञातकर्तृकः",
+  "divisionLabel": {
+    "sanskrit": "अध्यायः",
+    "english": "Adhyāya"
+  },
+  "divisions": [],
+  "status": "coming-soon"
+}

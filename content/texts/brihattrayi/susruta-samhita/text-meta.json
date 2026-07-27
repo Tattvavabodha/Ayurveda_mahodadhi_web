@@ -1,0 +1,17 @@
+{
+  "textId": "susruta-samhita",
+  "categoryId": "brihattrayi",
+  "order": 4,
+  "name": {
+    "sanskrit": "सुश्रुतसंहिता",
+    "transliteration": "Suśruta Saṃhitā",
+    "english": "Susruta Samhita"
+  },
+  "author": "सुश्रुतः",
+  "divisionLabel": {
+    "sanskrit": "स्थानम्",
+    "english": "Sthāna"
+  },
+  "divisions": [],
+  "status": "coming-soon"
+}
