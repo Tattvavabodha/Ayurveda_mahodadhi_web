@@ -28,9 +28,6 @@ later) and an internet connection (to download the required libraries).
 
 ## What's still placeholder (intentionally, explained in chat)
 
-- **Hero illustration**: currently a simple placeholder box. Replace
-  `public/images/hero-illustration.png` (once you add a real image) and
-  update the `<img>` reference in `src/components/home/HeroSection.tsx`.
 - **Search bar**: currently searches a tiny hardcoded example list, to
   demonstrate the interaction. Will be connected to the real search
   index once verse content and `lib/search/` are built.
