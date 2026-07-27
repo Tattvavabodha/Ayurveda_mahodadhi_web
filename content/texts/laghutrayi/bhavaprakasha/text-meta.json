@@ -1,0 +1,17 @@
+{
+  "textId": "bhavaprakasha",
+  "categoryId": "laghutrayi",
+  "order": 2,
+  "name": {
+    "sanskrit": "भावप्रकाशः",
+    "transliteration": "Bhāvaprakāśa",
+    "english": "Bhavaprakasha"
+  },
+  "author": "भावमिश्रः",
+  "divisionLabel": {
+    "sanskrit": "खण्डः",
+    "english": "Khaṇḍa"
+  },
+  "divisions": [],
+  "status": "coming-soon"
+}

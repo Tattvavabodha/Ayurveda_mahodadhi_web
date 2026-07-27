@@ -1,0 +1,17 @@
+{
+  "textId": "harita-samhita",
+  "categoryId": "madhyatrayi",
+  "order": 3,
+  "name": {
+    "sanskrit": "हारीतसंहिता",
+    "transliteration": "Hārīta Saṃhitā",
+    "english": "Harita Samhita"
+  },
+  "author": "हारीतः",
+  "divisionLabel": {
+    "sanskrit": "स्थानम्",
+    "english": "Sthāna"
+  },
+  "divisions": [],
+  "status": "coming-soon"
+}

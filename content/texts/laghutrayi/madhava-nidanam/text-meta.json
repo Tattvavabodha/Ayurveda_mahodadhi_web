@@ -1,0 +1,17 @@
+{
+  "textId": "madhava-nidanam",
+  "categoryId": "laghutrayi",
+  "order": 1,
+  "name": {
+    "sanskrit": "माधवनिदानम्",
+    "transliteration": "Mādhava Nidānam",
+    "english": "Madhava Nidanam"
+  },
+  "author": "माधवकरः",
+  "divisionLabel": {
+    "sanskrit": "अध्यायः",
+    "english": "Adhyāya"
+  },
+  "divisions": [],
+  "status": "coming-soon"
+}
