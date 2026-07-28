@@ -1,0 +1,11 @@
+{
+  "adhyayaId": "adhyaya-01",
+  "textId": "ashtanga-hridaya",
+  "divisionId": "sutrasthana",
+  "order": 1,
+  "name": {
+    "sanskrit": "आयुष्कामीयाध्यायः"
+  },
+  "status": "available",
+  "colophon": "इति श्रीवैद्यपतिसिंहगुप्तसूनुवाग्भटविरचितायामष्टाङ्गहृदयसंहितायां सूत्रस्थाने आयुष्कामीयो नाम प्रथमोऽध्यायः।"
+}
