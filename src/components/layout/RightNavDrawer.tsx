@@ -55,6 +55,8 @@ export default function RightNavDrawer({ isOpen, onClose, categories }: RightNav
         </div>
 
         <nav className="px-6 pb-8 font-devanagari text-lg text-text-brown space-y-6 overflow-y-auto">
+          <NavLink href="/">मुखपृष्ठम्</NavLink>
+
           {categories.map((category) => (
             <NavSection key={category.categoryId} title={category.name.sanskrit}>
               {category.texts.length > 0 ? (
