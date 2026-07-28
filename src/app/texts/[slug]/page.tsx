@@ -112,12 +112,11 @@ function TextView({
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {divisions.map((division) => (
-            <Card key={division.divisionId} className="px-6 py-5 text-center">
-              <p className="font-devanagari text-xl text-maroon">{division.name.sanskrit}</p>
-              <p className="text-xs text-text-brown/50 font-serif italic mt-2">
-                Content coming soon
-              </p>
-            </Card>
+            <a key={division.divisionId} href={`/texts/${text.textId}/${division.divisionId}`}>
+              <Card className="px-6 py-5 text-center">
+                <p className="font-devanagari text-xl text-maroon">{division.name.sanskrit}</p>
+              </Card>
+            </a>
           ))}
         </div>
       )}
