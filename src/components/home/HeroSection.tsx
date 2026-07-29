@@ -72,7 +72,7 @@ export default function HeroSection() {
         </div>
 
         <h1 className="font-devanagari text-5xl sm:text-6xl text-maroon font-semibold tracking-wide">
-          ॥आयुर्वेदमहोदधिः॥
+          आयुर्वेदमहोदधिः
         </h1>
       </div>
     </section>
