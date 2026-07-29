@@ -3,17 +3,18 @@ import { getTextMeta } from "@/lib/content/getTextMeta";
 import { getDivisions } from "@/lib/content/getDivisions";
 import { getAdhyayas } from "@/lib/content/getAdhyayas";
 import { getVerses } from "@/lib/content/getVerses";
+import VerseCard from "@/components/verse/VerseCard";
 
 /**
  * /texts/[slug]/[divisionId]/[adhyayaId] - the chapter page
  * ---------------------------------------------------------------------
- * Shows every verse in this chapter, one after another, in the exact
- * sequence they were added (see getVerses.ts). Deliberately simple
- * today - just the Sanskrit text and its number - because only the
- * `sanskrit` field has real content so far. The next installment will
- * add padaccheda/anvaya/padartha/etc., and this same page is where
- * they'll be displayed once populated - one new small component per
- * datapoint, same pattern as everywhere else in this project.
+ * Shows every verse in this chapter, one after another, in sequence
+ * (see getVerses.ts). Each verse is rendered by VerseCard, which
+ * handles the two-line pada layout and the click-to-expand datapoints
+ * (Patha, Avabodha and its sub-sections) - see that component for
+ * details. Only the `sanskrit` field has real content so far for most
+ * datapoints; VerseCard shows an honest "Not yet added" placeholder
+ * for anything still missing.
  * ---------------------------------------------------------------------
  */
 export default function AdhyayaPage({
@@ -51,18 +52,9 @@ export default function AdhyayaPage({
           Verses for this chapter will appear here soon.
         </p>
       ) : (
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col">
           {verses.map((verse) => (
-            <div key={verse.id} className="flex gap-4 items-start">
-              {verse.displayNumber && (
-                <span className="font-devanagari text-copper text-sm shrink-0 w-10 text-right pt-1">
-                  {verse.displayNumber}
-                </span>
-              )}
-              <p className="font-devanagari text-lg text-text-brown leading-relaxed">
-                {verse.sanskrit}
-              </p>
-            </div>
+            <VerseCard key={verse.id} verse={verse} />
           ))}
 
           {adhyaya.colophon && (
