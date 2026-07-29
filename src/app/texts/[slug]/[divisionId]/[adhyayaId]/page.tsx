@@ -58,7 +58,7 @@ export default function AdhyayaPage({
           ))}
 
           {adhyaya.colophon && (
-            <p className="font-devanagari text-sm text-text-brown/60 italic text-center mt-8 pt-6 border-t border-sandalwood">
+            <p className="font-devanagari text-lg text-maroon text-center mt-8 pt-6 border-t border-sandalwood">
               {adhyaya.colophon}
             </p>
           )}
