@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getTextMeta } from "@/lib/content/getTextMeta";
 import { getDivisions } from "@/lib/content/getDivisions";
 import { getAdhyayas } from "@/lib/content/getAdhyayas";
+import { toDevanagariNumeral } from "@/lib/utils/toDevanagariNumeral";
 import Card from "@/components/ui/Card";
 
 /**
@@ -48,7 +49,9 @@ export default function DivisionPage({
           {adhyayas.map((adhyaya) => {
             const content = (
               <Card className="px-5 py-4 flex items-center justify-between">
-                <span className="font-devanagari text-lg text-maroon">{adhyaya.name.sanskrit}</span>
+                <span className="font-devanagari text-lg text-maroon">
+                  {toDevanagariNumeral(adhyaya.order)}. {adhyaya.name.sanskrit}
+                </span>
                 {adhyaya.status === "coming-soon" && (
                   <span className="text-xs text-text-brown/50 font-serif italic">Coming soon</span>
                 )}
